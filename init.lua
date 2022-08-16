@@ -1,9 +1,5 @@
 require("keymappings")
 require("settings")
-require("plugins")
+require("packer-plugins")
 require("themes")
-require("nvim-tree").setup( require("nvim-tree").setup {
-      view = {
-        side = "right"
-          }
-      })
+require("plugins")

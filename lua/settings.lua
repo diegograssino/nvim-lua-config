@@ -1,3 +1,6 @@
+-- Some CMD to execute vim-script
+vim.cmd("set modifiable")
+
 -- Will unify clipboards
 vim.o.clipboard = "unnamedplus"
 
@@ -5,7 +8,6 @@ vim.o.clipboard = "unnamedplus"
 vim.o.splitbelow = true
 
 -- Will put the new window right of the current one
-vim.o.splitright = true
 vim.o.splitright = true
 
 -- Will lazy load the file
@@ -32,3 +34,12 @@ vim.bo.autoindent = true
 
 -- Highlight the screen line of the cursor with CursorLine
 vim.wo.cursorline = true
+
+-- Tab spaces config
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+
+-- Plugins able to add, remove files
+vim.bo.modifiable = true
