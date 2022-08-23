@@ -10,6 +10,9 @@ vim.keymap.set('n', '<Leader>wq', ':wq<CR>')
 -- Save
 vim.keymap.set('n', '<Leader>w', ':w<CR>')
 
+-- Save VSCode style
+vim.keymap.set('n', '<C-S>', ':wa<CR>')
+
 -- Reload config without exit
 vim.keymap.set('n','<Leader>so', ':so %<CR>')
 

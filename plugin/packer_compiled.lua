@@ -99,6 +99,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["mini.nvim"] = {
     loaded = true,
     path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mini.nvim",
@@ -133,11 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "C:\\Users\\diego\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
