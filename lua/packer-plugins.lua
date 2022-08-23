@@ -8,6 +8,10 @@ return require('packer').startup(function(use)
     'kyazdani42/nvim-web-devicons', -- optional, for file icons
   },
 }
+
+  -- bufferline
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
   -- mini.nvim and required
   use { 'echasnovski/mini.nvim', branch = 'stable' }
   use "lewis6991/gitsigns.nvim"
@@ -53,47 +57,12 @@ return require('packer').startup(function(use)
  }
   
   -- Themes
-  -- use "EdenEast/nightfox.nvim"
   use "folke/tokyonight.nvim"
-  -- use "Abstract-IDE/Abstract-cs"
-  -- use "tomasiser/vim-code-dark"
-  -- use "Mofiqul/vscode.nvim"
-  -- use "marko-cerovac/material.nvim"
-  -- use "bluz71/vim-nightfly-guicolors"
-  -- use "bluz71/vim-moonfly-colors"
-  -- use "ChristianChiarulli/nvcode-color-schemes.vim"
-  -- use "sainnhe/sonokai"
-  -- use "kyazdani42/blue-moon"
-  -- use "mhartington/oceanic-next"
-  -- use "glepnir/zephyr-nvim"
-  -- use "rockerBOO/boo-colorscheme-nvim"
-  -- use "RishabhRD/nvim-rdark"
-  -- use "ishan9299/modus-theme-vim"
-  -- use "sainnhe/edge"
-  -- use "theniceboy/nvim-deus"
-  -- use "bkegley/gloombuddy"
-  -- use "Th3Whit3Wolf/one-nvim"
-  -- use "PHSix/nvim-hybrid"
-  -- use "Th3Whit3Wolf/space-nvim"
-  -- use "yonlu/omni.vim"
-  -- use "ray-x/aurora"
-  -- use "tanvirtin/monokai.nvim"
-  -- use "savq/melange"
-  -- use "fenetikm/falcon"
   use "andersevenrud/nordic.nvim"
   use "shaunsingh/nord.nvim"
-  -- use "ishan9299/nvim-solarized-lua"
-  -- use "shaunsingh/moonlight.nvim"
-  -- use "navarasu/onedark.nvim"
   use "lourenci/github-colors"
   use "dracula/vim"
-  -- use "sainnhe/everforest"
-  -- use "yashguptaz/calvera-dark.nvim"
-  -- use "adisen99/codeschool.nvim"
   use "projekt0n/github-nvim-theme"
-  -- use "ldelossa/vimdark"
   use "rmehri01/onenord.nvim"
-  -- use "luisiacc/gruvbox-baby"
-  -- use "yazeed1s/minimal.nvim"
   use "kaiuri/github-vscode-theme.nvim"
 end)

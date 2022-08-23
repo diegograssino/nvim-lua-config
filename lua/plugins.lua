@@ -13,10 +13,66 @@ require("nvim-tree").setup({
   },
 })
 
+-- Bufferline
+  local groups = require('bufferline.groups')
+  require('bufferline').setup({
+    options = {
+		  indicator_icon = ' ',
+    	buffer_close_icon = '',
+    	modified_icon = '●',
+      show_close_icon = false,
+    	-- close_icon = '',
+		  left_trunc_marker = '',
+    	right_trunc_marker = '',
+      offsets = {
+        {
+          filetype = 'NvimTree',
+          text = 'EXPLORER',
+          highlight = 'PanelHeading',
+        },
+        {
+          filetype = 'packer',
+          text = 'Packer',
+          highlight = 'PanelHeading',
+        },
+      },
+      groups = {
+        options = {
+         toggle_hidden_on_enter = true,
+        },
+        items = {
+          groups.builtin.ungrouped,
+          {
+           name = "Tests", -- Mandatory
+           -- highlight = {gui = "underline", guisp = "blue"}, -- Optional
+           -- priority = 2, -- determines where it will appear relative to other groups (Optional)
+           icon = "", -- Optional
+           matcher = function(buf) -- Mandatory
+            return buf.name:match('%_test') or buf.name:match('%_spec')
+           end,
+          },
+          {
+            name = "Docs",
+            icon = '',
+            -- highlight = {gui = "undercurl", guisp = "green"},
+            -- priority = 3,
+            -- auto_close = false,  -- whether or not close this group if it doesn't contain the current buffer
+            matcher = function(buf)
+              return buf.name:match('%.md') or buf.name:match('%.txt')
+            end,
+            -- separator = { -- Optional
+            --  style = require('bufferline.groups').separator.tab
+            -- },
+          },
+        },
+      },
+    },
+  })
+
 --mini.nvim
 require('mini.statusline').setup({
   -- Content of statusline as functions which return statusline string. See
-  -- `:h statusline` and code of default contents (used instead of `nil`).
+  -- `:hi statusline` and code of default contents (used instead of `nil`).
   content = {
     -- Content for active window
     active = nil,
@@ -33,20 +89,20 @@ require('mini.statusline').setup({
   set_vim_settings = true,
 })
 
-require("mini.tabline").setup(
-{
-  -- Whether to show file icons (requires 'kyazdani42/nvim-web-devicons')
-  show_icons = true,
-
-  -- Whether to set Vim's settings for tabline (make it always shown and
-  -- allow hidden buffers)
-  set_vim_settings = true,
-
-  -- Where to show tabpage section in case of multiple vim tabpages.
-  -- One of 'left', 'right', 'none'.
-  tabpage_section = 'left',
-}
-)
+-- require("mini.tabline").setup(
+-- {
+--  -- Whether to show file icons (requires 'kyazdani42/nvim-web-devicons')
+  -- show_icons = true,
+--
+--  -- Whether to set Vim's settings for tabline (make it always shown and
+--  -- allow hidden buffers)
+--  set_vim_settings = true,
+--
+--  -- Where to show tabpage section in case of multiple vim tabpages.
+--  -- One of 'left', 'right', 'none'.
+--  tabpage_section = 'left',
+-- }
+-- )
 
 require("mini.comment").setup({
   -- Module mappings. Use `''` (empty string) to disable one.

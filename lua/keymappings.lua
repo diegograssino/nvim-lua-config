@@ -41,3 +41,16 @@ end, { silent = true })
 
 -- Preview Definition
 vim.keymap.set("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+
+-- Move between buffers
+-- vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", silent)
+vim.keymap.set("n", "<Tab>", ":bn<CR>", silent)
+-- vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", silent)
+vim.keymap.set("n", "<S-Tab>", ":bp<CR>", silent)
+vim.keymap.set("n", "<S-q>", ":BufferClose<CR>", silent)
+
+-- Move between windows
+vim.keymap.set("n", "<C-h>", "<C-w>h", silent)
+vim.keymap.set("n", "<C-j>", "<C-w>j", silent)
+vim.keymap.set("n", "<C-k>", "<C-w>k", silent)
+vim.keymap.set("n", "<C-l>", "<C-w>l", silent)

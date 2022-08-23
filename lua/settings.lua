@@ -1,6 +1,9 @@
 -- Some CMD to execute vim-script
 vim.cmd("set modifiable")
 
+-- Termcolors
+vim.opt.termguicolors = true
+
 -- Will unify clipboards
 vim.o.clipboard = "unnamedplus"
 
@@ -19,7 +22,7 @@ vim.o.number = true
 
 -- Show the line number relative to the line with the cursor in front of each line
 vim.wo.relativenumber = false
-vim.o.relativenumber = false
+vim.o.relativenumber = true
 
 -- Lines longer than the width of the window will wrap and displaying continues on the next line
 vim.wo.wrap = false
@@ -34,6 +37,9 @@ vim.bo.autoindent = true
 
 -- Highlight the screen line of the cursor with CursorLine
 vim.wo.cursorline = true
+
+-- Will allow mouse use
+vim.o.mouse = "a"
 
 -- Tab spaces config
 vim.o.tabstop = 2
